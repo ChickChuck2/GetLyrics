@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane style="-fx-background-color: #4f4f4f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Button fx:id="Confirmar" defaultButton="true" layoutX="205.0" layoutY="73.0" mnemonicParsing="false" onAction="#ProcurarLetra" style="-fx-text-fill: #3462ad; -fx-background-color: #e6f0f5;" text="Confirmar" />
+    <TextArea fx:id="musicaletra" layoutY="105.0" prefHeight="503.0" prefWidth="411.0" style="-fx-control-inner-background: #4f4f4f;" stylesheets="@Style.css" wrapText="true">
+        <font>
+          <Font name="KaiTi" size="15.0" />
+        </font>
+    </TextArea>
+    <CheckBox fx:id="AutoWrite" alignment="TOP_LEFT" layoutX="39.0" layoutY="52.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="188.0" style="-fx-text-fill: white;" stylesheets="@Style.css" text="Enviar letra em caixas de Texto" />
+    <TextField fx:id="InputArtista" alignment="TOP_LEFT" layoutX="54.0" layoutY="12.0" style="-fx-control-inner-background: #454545;" />
+    <Label layoutX="13.0" layoutY="16.0" style="-fx-text-fill: white;" text="Artista:" />
+    <Button fx:id="AutoWriteInfo" layoutX="13.0" layoutY="48.0" mnemonicParsing="false" onAction="#AutoWriteInfoAction" stylesheets="@Style.css" text="?" />
+    <TextField fx:id="InputMusic" alignment="TOP_CENTER" layoutX="262.0" layoutY="12.0" style="-fx-control-inner-background: #454545;" />
+    <Label layoutX="220.0" layoutY="16.0" style="-fx-text-fill: white;" text="Musica:" />
+</Pane>

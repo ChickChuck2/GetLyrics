@@ -1,0 +1,32 @@
+.text-area .scroll-bar .thumb{
+    -fx-background-color: dimgray;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+}
+.text-area {
+    -fx-background-color: transparent;
+
+}
+.text-area:focused {
+    -fx-highlight-fill: transparent;
+    -fx-focus-color: -fx-control-inner-background;
+    -fx-faint-focus-color: -fx-control-inner-background;
+
+}
+.text-area .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+}
+.check-box {
+    box-color: red;
+    mark-color: green;
+}
+.check-box:selected {
+    -fx-background-color: selected-box-color;
+}
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: mark-color;
+}
