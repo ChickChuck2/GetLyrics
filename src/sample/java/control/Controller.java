@@ -1,9 +1,10 @@
-package sample;
+package sample.java.control;
 
 import javafx.scene.control.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +30,14 @@ public class Controller {
         String title = doc.title();
         System.out.println(title);
         Element p = doc.select("#lyrics").get(0);
-        p.childNodes().stream().filter((e) -> (e instanceof TextNode)).forEachOrdered((e) -> lyrics.add(((TextNode) e).getWholeText()));
+        for (Node e: p.childNodes()) {
+            if (e instanceof TextNode) {
+                lyrics.add(((TextNode)e).getWholeText());
+            }
+        }
+        System.out.println(lyrics);
         return lyrics;
     }
-
-
 
     public void ProcurarLetra() {
         List<String> LetraMusica;
